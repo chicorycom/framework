@@ -1,10 +1,35 @@
 {
     "name": "chicorycom/framework",
+    "minimum-stability": "dev",
+    "keywords": ["framework", "chicorycom"],
+    "license": "MIT",
     "authors": [
         {
             "name": "Assane Sarr",
             "email": "contact@chicorycom.net"
         }
     ],
-    "require": {}
+    "support": {
+        "issues": "https://github.com/chicorycom/framework/issues",
+        "source": "https://github.com/chicorycom/framework/tree/master"
+    },
+    "require": {
+        "php": "^7.4",
+        "ext-calendar": "*",
+        "ext-curl": "*",
+        "ext-dom": "*",
+        "ext-json": "*",
+        "ext-openssl": "*",
+        "ext-pdo": "*"
+    },
+    "scripts": {
+        "post-root-package-install": [
+            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ]
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
 }
