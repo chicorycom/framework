@@ -1,0 +1,10 @@
+{
+    "name": "chicorycom/framework",
+    "authors": [
+        {
+            "name": "Assane Sarr",
+            "email": "contact@chicorycom.net"
+        }
+    ],
+    "require": {}
+}
