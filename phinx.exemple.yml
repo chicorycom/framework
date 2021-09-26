@@ -1,0 +1,36 @@
+paths:
+    bootstrap: 'src/bootstrap/console.php'
+    migrations: '%%PHINX_CONFIG_DIR%%/src/database/migrations'
+    seeds: '%%PHINX_CONFIG_DIR%%/src/database/seeders'
+
+environments:
+    default_migration_table: migrations_table
+    default_database: chicorycom
+    chicorycom:
+        adapter: mysql
+        host: localhost
+        name: chicorycom
+        user: root
+        pass: 'root'
+        port: 3306
+        charset: utf8
+
+    development:
+        adapter: mysql
+        host: localhost
+        name: chicorycom_dev
+        user: root
+        pass: 'root'
+        port: 3306
+        charset: utf8
+
+    testing:
+        adapter: mysql
+        host: localhost
+        name: testing_db
+        user: root
+        pass: ''
+        port: 3306
+        charset: utf8
+
+version_order: creation
