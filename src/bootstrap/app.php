@@ -7,6 +7,10 @@ use Boot\Foundation\AppFactoryBridge as App;
 
 $app = App::create(new Container);
 
+$app->setPath(dirname(dirname(__DIR__)));
+
+
+
 $http_kernel = new HttpKernel($app);
 $console_kernel = new ConsoleKernel($app);
 

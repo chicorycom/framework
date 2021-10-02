@@ -6,7 +6,7 @@ Console::command('inspire', function () {
     echo '';
 });
 Console::command('tinker', function () {
-    //$team = \App\Team::first();
+    $team = \App\Models\User::first();
 
-   // $this->info("$team->name belongs to {$team->user->first_name}");
+    $this->info("$team->name belongs to ");
 });

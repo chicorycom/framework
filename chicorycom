@@ -2,12 +2,14 @@
 
 <?php
 
+define('FRAMEWORK_START', microtime(true));
+
 $app = require __DIR__ . '/src/bootstrap/console.php';
 
 /**
  * Resolve Symfony Console
  */
-$console = $app->resolve(\Symfony\Component\Console\Application::class);
+$console = $app->resolve(Boot\Foundation\Console\Application::class);
 
 /**
  * Run Command

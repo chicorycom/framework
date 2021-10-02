@@ -16,10 +16,12 @@ class LoginController
     /**
      * @return ResponseInterface
      */
-    public function index(): ResponseInterface
+    public function index($response): ResponseInterface
     {
 
-        return view( 'auth.login');
+        $response->getBody()->write(json_encode(['message'=> 'Success'], JSON_PRETTY_PRINT));
+        $res = $response->withStatus(200);
+        return $res->withHeader('Content-Type', 'application/json');
         //return $view('auth.login');
     }
 

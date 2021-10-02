@@ -72,7 +72,7 @@ return [
     'make:model' => [
         'file' => '{DummyModel}.stub',
         'content' => file_get_contents(resources_path('stubs/{DummyModel}.stub')),
-        'make_path' => app_path(''),
+        'make_path' => app_path('Models'),
 
         'replace' => [
             'file' => [
@@ -81,7 +81,7 @@ return [
             ],
             'content' => [
                 '{DummyModel}' => ':model:',
-                '{DummyNamespace}' => 'App',
+                '{DummyNamespace}' => 'App\Models',
                 '{DummyModel|snake}' => ':model:',
             ]
         ]
@@ -157,20 +157,8 @@ return [
     ],
     'make:migration' => [
         'file' => '{DummyMigration}.stub',
-        'content' => file_get_contents(resources_path('stubs/{DummyMigration}.stub')),
-
+        'stub' => resources_path('stubs'),
         'make_path' => database_path('migrations'),
-
-        'replace' => [
-            'file' => [
-                'stub' => 'php',
-                '{DummyMigration}' => ':name:'
-            ],
-            'content' => [
-                '{DummyClass}' => ':name:',
-                '{DummyNamespace}' => 'App\\Http\\Requests'
-            ]
-        ],
 
     ]
 ];
