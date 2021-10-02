@@ -1,34 +1,26 @@
 <?php
 
 use App\Http\HttpKernel;
-use Boot\Console\ConsoleKernel;
-use DI\Container;
-use Boot\Foundation\AppFactoryBridge as App;
 
-$app = App::create(new Container);
-
-$app->setPath(dirname(dirname(__DIR__)));
+$app = new Boot\Foundation\App(
+    $_ENV['APP_BASE_PATH'] ?? dirname( dirname(__DIR__) )
+);
 
 
+$app->singleton(
+    Illuminate\Contracts\Http\Kernel::class,
+    HttpKernel::class
+);
 
-$http_kernel = new HttpKernel($app);
-$console_kernel = new ConsoleKernel($app);
+$app->singleton(
+    Illuminate\Contracts\Console\Kernel::class,
+    App\Console\Kernel::class
+);
 
-$app->bind(HttpKernel::class, $http_kernel);
-$app->bind(ConsoleKernel::class, $console_kernel);
+$app->singleton(
+    Illuminate\Contracts\Debug\ExceptionHandler::class,
+    App\Exceptions\Handler::class
+);
 
-$_SERVER['app'] = &$app;
-
-if (!function_exists('app'))
-{
-    function app()
-    {
-        return $_SERVER['app'];
-    }
-}
-
-$app->addBodyParsingMiddleware();
-
-$app->addRoutingMiddleware();
 
 return $app;

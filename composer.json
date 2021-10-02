@@ -14,9 +14,6 @@
         "source": "https://github.com/chicorycom/framework/tree/master"
     },
     "autoload": {
-        "files": [
-            "src/app/helpers.php"
-        ],
         "psr-4" : {
             "App\\" : "src/app"
         }
@@ -34,7 +31,8 @@
         "ext-json": "*",
         "ext-openssl": "*",
         "ext-pdo": "*",
-        "chicorycom/bootstrap": "dev-master"
+        "chicorycom/bootstrap": "1.1.0.x-dev",
+        "fruitcake/laravel-cors": "^2.0"
     },
     "scripts": {
         "post-root-package-install": [
