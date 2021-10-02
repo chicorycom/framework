@@ -5,10 +5,13 @@ namespace App\Http\Controllers\Api;
 
 
 
-class UserController extends APIController
-{
-    public function index($response){
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 
-        return $this->json($response, ['api'=>'REST']);
+class UserController extends Controller
+{
+    public function index(Request $request){
+
+        return ['json'=>'response'];
     }
 }

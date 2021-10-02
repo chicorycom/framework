@@ -23,6 +23,8 @@
 *  @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
 *  International Registered Trademark & Property of Chicorycom
 */
+use Illuminate\Contracts\Http\Kernel;
+use Illuminate\Http\Request;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
@@ -32,22 +34,27 @@ require_once __DIR__ . '/../vendor/autoload.php';
 $app = require_once __DIR__ . '/../src/bootstrap/app.php';
 
 /**
- * Resolve Http Kernel
- */
 $kernel = $app->resolve(App\Http\HttpKernel::class);
 
-/**
- * Bootstrap Our Http Application
- */
+
 $kernel->bootstrapApplication();
 
 /**
  * Passing our Request through the app
- */
+
 $app->run();
+*/
 
 
 
+$kernel = $app->make(Kernel::class);
+
+
+$response = tap($kernel->handle(
+    $request = Request::capture()
+))->send();
+
+$kernel->terminate($request, $response);
 
 
 
