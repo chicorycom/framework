@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e14512d96ef63658a6ee508085e48d4d",
+    "content-hash": "ed91ffb95708e48599bad7be28e130d5",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -124,11 +124,11 @@
         },
         {
             "name": "chicorycom/bootstrap",
-            "version": "1.1.0.x-dev",
+            "version": "dev-master",
             "dist": {
                 "type": "path",
                 "url": "/home/assane/dev-doc/web-apps/bootstrap",
-                "reference": "bcbcf273aef14e877495c274fa18acff6ee6b363"
+                "reference": "6e3fd88d5127056079b39dae7e40e23f5be2ce31"
             },
             "require": {
                 "ext-calendar": "*",

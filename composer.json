@@ -31,7 +31,7 @@
         "ext-json": "*",
         "ext-openssl": "*",
         "ext-pdo": "*",
-        "chicorycom/bootstrap": "1.1.0.x-dev",
+        "chicorycom/bootstrap": "dev-master",
         "fruitcake/laravel-cors": "^2.0"
     },
     "scripts": {
