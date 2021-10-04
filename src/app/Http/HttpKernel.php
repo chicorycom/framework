@@ -4,7 +4,7 @@
 namespace App\Http;
 
 
-use Boot\Foundation\HttpKernel as Kernel;
+use Boot\Foundation\Http\Kernel;
 
 class HttpKernel extends Kernel
 {
@@ -14,13 +14,7 @@ class HttpKernel extends Kernel
      * Injectable Request Input Form Request Validators
      * @var array
      */
-    public array $requests = [
-        Requests\StoreRegisterRequest::class,
-        Requests\StoreEmployesRequest::class,
-        Requests\StoreLoginRequest::class,
-        Requests\StoreResetPasswordRequest::class,
-        Requests\UpdateResetPasswordRequest::class,
-    ];
+    public array $requests = [];
 
 
     /**
@@ -28,19 +22,31 @@ class HttpKernel extends Kernel
      *
      * @var array
      */
-    public array $middleware = [
-        Middleware\RouteContextMiddleware::class,
-//        Middleware\SentryMiddleware::class,
-//        Middleware\ExampleBeforeMiddleware::class
+    protected array $middleware = [
+        \App\Http\Middleware\TrustProxies::class,
+        \Fruitcake\Cors\HandleCors::class,
+        \App\Http\Middleware\PreventRequestsDuringMaintenance::class,
+        \Boot\Foundation\Http\Middleware\ValidatePostSize::class,
+        \App\Http\Middleware\TrimStrings::class,
+        \Boot\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
     ];
 
     /**
      * Route Group Middleware
      */
     public array $middlewareGroups = [
-        'api' => [],
+        'api' => [
+            //'throttle:api',
+            \Illuminate\Routing\Middleware\SubstituteBindings::class,
+        ],
         'web' => [
-            'csrf'
+            \App\Http\Middleware\EncryptCookies::class,
+            \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
+            \Illuminate\Session\Middleware\StartSession::class,
+            // \Illuminate\Session\Middleware\AuthenticateSession::class,
+            \Illuminate\View\Middleware\ShareErrorsFromSession::class,
+            \App\Http\Middleware\VerifyCsrfToken::class,
+            \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ]
     ];
 
