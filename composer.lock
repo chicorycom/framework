@@ -72,7 +72,7 @@
             "dist": {
                 "type": "path",
                 "url": "/home/assane/dev-doc/web-apps/bootstrap",
-                "reference": "b9c5d7bba68dfddd294f0668769fde4bf7455005"
+                "reference": "bcbcf273aef14e877495c274fa18acff6ee6b363"
             },
             "require": {
                 "ext-calendar": "*",
