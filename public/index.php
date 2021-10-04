@@ -33,19 +33,6 @@ require_once __DIR__ . '/../vendor/autoload.php';
  */
 $app = require_once __DIR__ . '/../src/bootstrap/app.php';
 
-/**
-$kernel = $app->resolve(App\Http\HttpKernel::class);
-
-
-$kernel->bootstrapApplication();
-
-/**
- * Passing our Request through the app
-
-$app->run();
-*/
-
-
 
 $kernel = $app->make(Kernel::class);
 
