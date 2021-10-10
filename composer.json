@@ -31,7 +31,7 @@
         "ext-json": "*",
         "ext-openssl": "*",
         "ext-pdo": "*",
-        "chicorycom/bootstrap": "1.1.0.x-dev",
+        "chicorycom/bootstrap": "^1.2",
         "fruitcake/laravel-cors": "^2.0"
     },
     "scripts": {
@@ -48,14 +48,5 @@
     "prefer-stable": true,
     "require-dev": {
         "phpunit/phpunit": "^9.5"
-    },
-    "repositories": {
-        "chicorycom/bootstrap": {
-            "type": "path",
-            "url": "/home/assane/dev-doc/web-apps/bootstrap",
-            "options": {
-                "symlink": true
-            }
-        }
     }
 }

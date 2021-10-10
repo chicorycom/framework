@@ -1,12 +1,18 @@
-/vendor
-/.idea
 /node_modules
-/docker/mysql/data
-/Documents
-/src/storage/*.key
-/src/storage/cache
+/public/hot
 /public/storage
+/storage/*.key
+/vendor
 .env
-phinx.yml
+.env.backup
+.phpunit.result.cache
+docker-compose.override.yml
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/.idea
+/.vscode
+
 
 
