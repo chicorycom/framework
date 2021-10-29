@@ -1,6 +1,6 @@
 # Chicorycom-fromework
 ### The PHP Framework for Chicorycom
-chicorycom-framwork v1.0.0
+chicorycom-framwork v1.2.3
 
 ## Documentation Sections
 - [Installation](#installation)
@@ -62,7 +62,7 @@ folders:
         to: /home/vagrant/code
 sites:
     -
-        map: slim.auth
+        map: chicorycom.auth
         to: /home/vagrant/code/public
 databases:
     - chicorycom
@@ -83,7 +83,7 @@ hostname: chicorycom
 
 6. Once booted, open up your local machine's host file (sudo vim /etc/hosts on linux or mac)
 
-7. Add slim.auth
+7. Add chicorycom.auth
 
 8. Boot up the vagrant virtual
 ```bash
@@ -108,7 +108,7 @@ hostname: chicorycom
 ###########################
 # Homestead Sites (Slim 4)
 ###########################
-192.168.10.10   slim.auth
+192.168.10.10   chicorycom.auth
 ```
 
 11. Close and save hosts file
@@ -348,9 +348,9 @@ class ConsoleKernel extends Kernel
 
 **Example**
 ```php
-ExampleController 
+class ExampleController 
 {
-   index()
+   public function index()
    {
       return back();
    }
@@ -361,7 +361,7 @@ ExampleController
 - Set up events and event listeners
 
 ```php
-event()->listen('flash.success', fn ($message) => session()->flash()->add('success', $message);
+event()->listen('flash.success', fn ($message) => session()->flash()->add('success', $message));
 
 event()->fire('flash.success', ['Way to go, it worked!']);
 ```
@@ -373,7 +373,7 @@ event()->fire('flash.success', ['Way to go, it worked!']);
 - create App/Listeners/ExampleListener
 
 **Register Class Event & Listeners in `config/events.php`**
-``` php
+```php
 return [
    'events' => [
       ExampleEvent::class => [
@@ -543,6 +543,7 @@ class FlashWelcomeBackMessage
 }
 ```
 **Register Class Event & Listeners in `config/events.php`**
+
 ```php 
 return [
    'events' => [
