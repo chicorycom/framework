@@ -1,0 +1,26 @@
+#!/usr/bin/env php
+
+<?php
+
+define('FRAMEWORK_START', microtime(true));
+
+$app = require __DIR__ . '/src/bootstrap/console.php';
+
+/**
+ * Resolve Symfony Console
+ */
+$console = $app->resolve(Boot\Foundation\Console\Application::class);
+
+/**
+ * Run Command
+ */
+$console->run();
+
+/**
+ * Exit Console Application
+ */
+exit();
+
+
+
+

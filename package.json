@@ -1,0 +1,37 @@
+{
+  "name": "@chicorycom/framework",
+  "version": "1.0.0",
+  "description": "votre integrateur reseau systeme te securite",
+  "private": true,
+  "scripts": {
+    "dev": "yarn run development",
+    "development": "npx mix",
+    "watch": "npx mix watch",
+    "prod": "yarn run production",
+    "production": "npx mix -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chicorycom/framework.git"
+  },
+  "author": "Assane Sarr <contact@chicorycom.net>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chicorycom/framework/issues"
+  },
+  "homepage": "https://github.com/chicorycom/framework#readme",
+  "devDependencies": {
+    "copy-webpack-plugin": "9.0.1",
+    "css-loader": "^5.0.1",
+    "laravel-mix": "^6.0.25",
+    "postcss": "^8.1",
+    "resolve-url-loader": "^3.1.2",
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.1",
+    "ch-router-js": "1.0.7",
+    "gasparesganga-jquery-loading-overlay": "2.1.7"
+  }
+}
