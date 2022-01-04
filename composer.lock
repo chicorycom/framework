@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cd29ded68fefd5ecc71e9e9ce43378f3",
+    "content-hash": "92cbfe801649d7dd1504723028ea15ce",
     "packages": [
         {
             "name": "brick/math",
@@ -68,11 +68,17 @@
         },
         {
             "name": "chicorycom/bootstrap",
-            "version": "dev-master",
+            "version": "2.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/chicorycom/bootstrap.git",
+                "reference": "433632a18ae840b51e55e240fdef8370886fd3ca"
+            },
             "dist": {
-                "type": "path",
-                "url": "/home/assane/dev-doc/chicorycom-php-framework/bootstrap",
-                "reference": "70bc2ffe61d0e275a2b8cb77d4b8683c61026ce1"
+                "type": "zip",
+                "url": "https://api.github.com/repos/chicorycom/bootstrap/zipball/433632a18ae840b51e55e240fdef8370886fd3ca",
+                "reference": "433632a18ae840b51e55e240fdef8370886fd3ca",
+                "shasum": ""
             },
             "require": {
                 "ext-calendar": "*",
@@ -113,11 +119,7 @@
                     "Boot\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Tests\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -127,10 +129,11 @@
                     "email": "contact@chicorycom.net"
                 }
             ],
-            "transport-options": {
-                "symlink": true,
-                "relative": false
-            }
+            "support": {
+                "issues": "https://github.com/chicorycom/bootstrap/issues",
+                "source": "https://github.com/chicorycom/bootstrap/tree/2.1.2"
+            },
+            "time": "2022-01-04T13:57:54+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -8161,9 +8164,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "chicorycom/bootstrap": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

@@ -34,12 +34,11 @@
         "ext-json": "*",
         "ext-openssl": "*",
         "ext-pdo": "*",
-        "chicorycom/bootstrap": "dev-master"
+        "chicorycom/bootstrap": "^2.1.2"
     },
     "scripts": {
         "post-root-package-install": [
-            "php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-            "php -r \"file_exists('phinx.yml') || copy('phinx.example.yml', 'phinx.yml');\""
+            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ]
     },
     "config": {
@@ -50,14 +49,5 @@
     "prefer-stable": true,
     "require-dev": {
         "phpunit/phpunit": "^9.5"
-    },
-    "repositories": {
-        "chicorycom/bootstrap": {
-            "type": "path",
-            "url": "/home/assane/dev-doc/chicorycom-php-framework/bootstrap",
-            "options": {
-                "symlink": true
-            }
-        }
     }
 }
