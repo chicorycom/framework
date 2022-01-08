@@ -68,16 +68,16 @@
         },
         {
             "name": "chicorycom/bootstrap",
-            "version": "2.1.4",
+            "version": "2.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chicorycom/bootstrap.git",
-                "reference": "382e3f6f872b0e4143dee38a29395fd1077ddcd3"
+                "reference": "ba682433ab197534ce49d5716ca97cd332b2fa2f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chicorycom/bootstrap/zipball/382e3f6f872b0e4143dee38a29395fd1077ddcd3",
-                "reference": "382e3f6f872b0e4143dee38a29395fd1077ddcd3",
+                "url": "https://api.github.com/repos/chicorycom/bootstrap/zipball/ba682433ab197534ce49d5716ca97cd332b2fa2f",
+                "reference": "ba682433ab197534ce49d5716ca97cd332b2fa2f",
                 "shasum": ""
             },
             "require": {
@@ -131,9 +131,9 @@
             ],
             "support": {
                 "issues": "https://github.com/chicorycom/bootstrap/issues",
-                "source": "https://github.com/chicorycom/bootstrap/tree/2.1.4"
+                "source": "https://github.com/chicorycom/bootstrap/tree/2.1.6"
             },
-            "time": "2022-01-06T17:52:25+00:00"
+            "time": "2022-01-08T12:21:22+00:00"
         },
         {
             "name": "dflydev/dot-access-data",
@@ -582,16 +582,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.14.4",
+            "version": "2.14.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "f056f1fe935d9ed86e698905a957334029899895"
+                "reference": "a63e5e8f26ebbebf8ed3c5c691637325512eb0dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/f056f1fe935d9ed86e698905a957334029899895",
-                "reference": "f056f1fe935d9ed86e698905a957334029899895",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/a63e5e8f26ebbebf8ed3c5c691637325512eb0dc",
+                "reference": "a63e5e8f26ebbebf8ed3c5c691637325512eb0dc",
                 "shasum": ""
             },
             "require": {
@@ -641,7 +641,7 @@
             ],
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
-                "source": "https://github.com/filp/whoops/tree/2.14.4"
+                "source": "https://github.com/filp/whoops/tree/2.14.5"
             },
             "funding": [
                 {
@@ -649,7 +649,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-10-03T12:00:00+00:00"
+            "time": "2022-01-07T12:00:00+00:00"
         },
         {
             "name": "graham-campbell/result-type",
