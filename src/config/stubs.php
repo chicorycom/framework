@@ -160,5 +160,22 @@ return [
         'stub' => resources_path('stubs'),
         'make_path' => database_path('migrations'),
 
+    ],
+    'make:seeder' => [
+        'file' => '{DummySeeder}.stub',
+        'content' => file_get_contents(resources_path('stubs/{DummySeeder}.stub')),
+
+        'make_path' => database_path('seeders'),
+
+        'replace' => [
+            'file' => [
+                'stub' => 'php',
+                '{DummySeeder}' => ':name:'
+            ],
+            'content' => [
+                '{DummyClass}' => ':name:'
+            ]
+        ],
+
     ]
 ];

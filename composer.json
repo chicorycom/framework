@@ -18,7 +18,8 @@
             "src/app/helpers.php"
         ],
         "psr-4" : {
-            "App\\" : "src/app"
+            "App\\" : "src/app",
+            "Database\\Seeders\\": "src/database/seeders/"
         }
     },
     "autoload-dev": {

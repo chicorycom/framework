@@ -68,16 +68,16 @@
         },
         {
             "name": "chicorycom/bootstrap",
-            "version": "2.1.6",
+            "version": "2.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chicorycom/bootstrap.git",
-                "reference": "ba682433ab197534ce49d5716ca97cd332b2fa2f"
+                "reference": "816b9ce1a900fad7343d8507f57ad7d5d7e41add"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chicorycom/bootstrap/zipball/ba682433ab197534ce49d5716ca97cd332b2fa2f",
-                "reference": "ba682433ab197534ce49d5716ca97cd332b2fa2f",
+                "url": "https://api.github.com/repos/chicorycom/bootstrap/zipball/816b9ce1a900fad7343d8507f57ad7d5d7e41add",
+                "reference": "816b9ce1a900fad7343d8507f57ad7d5d7e41add",
                 "shasum": ""
             },
             "require": {
@@ -131,9 +131,9 @@
             ],
             "support": {
                 "issues": "https://github.com/chicorycom/bootstrap/issues",
-                "source": "https://github.com/chicorycom/bootstrap/tree/2.1.6"
+                "source": "https://github.com/chicorycom/bootstrap/tree/2.1.8"
             },
-            "time": "2022-01-08T12:21:22+00:00"
+            "time": "2022-01-08T23:41:19+00:00"
         },
         {
             "name": "dflydev/dot-access-data",

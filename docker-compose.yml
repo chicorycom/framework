@@ -1,0 +1,45 @@
+version: '3.3'
+
+networks:
+  infoschool:
+
+services:
+  apache:
+    build:
+      context: ./docker/php
+      dockerfile: Dockerfile
+    container_name: web
+    ports:
+      - "8080:80"
+    user: ${USER_ID}:${GROUP_ID}
+    volumes:
+      - ".:/var/www/html"
+    sysctls:
+      - net.ipv4.ip_unprivileged_port_start=0
+    depends_on:
+      - db
+    environment:
+      DB_DATABASE: infoschool
+      DB_HOST: db
+      DB_USER: root
+      DB_PASSWORD: root
+    networks:
+      - infoschool
+
+
+  db:
+    container_name: mysql
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    volumes:
+      - ./docker/mysql/data:/var/lib/mysql
+    sysctls:
+      - net.ipv4.ip_unprivileged_port_start=0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: infoschool
+    ports:
+      - 6033:3306
+    networks:
+      - infoschool
